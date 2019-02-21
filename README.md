@@ -34,7 +34,7 @@ Semplicemente apri il main nella directory "Esercizi" o "Riassunto" e salva.
 
 ### Ho trovato un errore di battitura, come lo segnalo?
 
-Per segnalare qualsiasi problema aprite una issue [qui](https://github.com/UniPR-Informatica/Reti-Di-Calcolatori/issues/new), per risolverlo voi stessi verificate come contribuire a questa repository [qui](CONTRIBUTING.md).
+Per segnalare qualsiasi problema aprite una issue [qui](https://github.com/UniPR-Informatica/Reti-Di-Calcolatori/issues/new?labels=Typo&template=errore-di-battitura--typo-.md), per risolverlo voi stessi verificate come contribuire a questa repository [qui](CONTRIBUTING.md).
 
 ### Ho seguito tutte le istruzioni alla lettera eppure non funziona nulla, come mi comporto?
 
