@@ -1,0 +1,34 @@
+\begin{center}
+    \begin{tikzpicture}
+        %%%%%%%%% Testo %%%%%%%%%%
+        \node at (1,5.2) {\texttt{d$_{\texttt{1,1}}$}};
+        \node at (1.8,5.2) {\texttt{...}};
+        \node at (2.6,5.2) {\texttt{d$_{\texttt{1,j}}$}};
+        \node at (1,4.8) {\texttt{d$_{\texttt{2,1}}$}};
+        \node at (1.8,4.8) {\texttt{...}};
+        \node at (2.6,4.8) {\texttt{d$_{\texttt{2,j}}$}};
+        \node at (1,4.4) {\texttt{...}};
+        \node at (1.8,4.4) {\texttt{...}};
+        \node at (2.6,4.4) {\texttt{...}};
+        \node at (1,4) {\texttt{d$_{\texttt{i,1}}$}};
+        \node at (1.8,4) {\texttt{...}};
+        \node at (2.6,4) {\texttt{d$_{\texttt{i,j}}$}};
+        \node at (1,3.4) {\texttt{d$_{\texttt{i+1,1}}$}};
+        \node at (1.8,3.4) {\texttt{...}};
+        \node at (2.6,3.4) {\texttt{d$_{\texttt{i+1,j}}$}};
+
+        \node at (3.9,5.2) {\texttt{d$_{\texttt{1,j+1}}$}};
+        \node at (3.9,4.8) {\texttt{d$_{\texttt{2,j+1}}$}};
+        \node at (3.9,4.4) {\texttt{...}};
+        \node at (3.9,4) {\texttt{d$_{\texttt{i,j+1}}$}};
+        \node at (3.9,3.4) {\texttt{d$_{\texttt{i+1,j+1}}$}};
+
+        %%%%%%%%%% Assi %%%%%%%%%%
+        \draw (0.5,3.7) -- (4.5,3.7);
+        \draw (3.2,3.1) -- (3.2,5.5);
+
+        %%%%%%%%% Frecce %%%%%%%%%
+        \draw[->,blue] (3,6) -- node[above,scale=0.7] {row} node[below,scale=0.7]{parity} (4,6);
+        \draw[->,blue] (0.3,4) -- node[left,scale=0.7,text width=1.3cm] {column parity} (0.3,3.2);
+    \end{tikzpicture}
+\end{center}

@@ -1,0 +1,2 @@
+openssl genrsa -out rsa_key.pem 2048
+# aggiungere -des3 per cifrare la private key con un pass-phrase

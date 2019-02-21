@@ -1,0 +1,1 @@
+SSL_CTX_load_verify_locations(ctx, "path_CA_cert.pem", "path_CA_dir");

@@ -1,0 +1,3 @@
+$ openssl dgst -sha1 -verify rsa_pub.pem -signature /
+  file.sha1_sign file.txt
+> Verified OK

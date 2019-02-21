@@ -1,0 +1,11 @@
+# Genera il file PKCS12 dai file PEM:
+openssl pkcs12 -export -out cert.p12 -inkey userkey.pem -in \
+usercert.pem
+
+# Dal formato PKCS12 a PEM (separatamente chiave e certificato)
+#   1. Estrai la chiave dal .p12 (aggiungere -nodes per i server)
+openssl pkcs12 -nocerts -in cert.p12 -out userkey.pem
+#   2. Estrai il certificato da cert.p12
+openssl pkcs12 -clcerts -nokeys -in cert.p12 -out usercert.pem
+#   3. visualizza il certificato in chiaro
+openssl x509 -in usercert.pem –text

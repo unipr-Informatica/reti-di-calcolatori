@@ -1,0 +1,68 @@
+\section{Livello Trasporto}
+    \subsection{Trasmissione di file}
+        \problem
+        Si consideri la trasmissione di un file di 6 KB (6000 byte) con finestra di ricezione rwnd fissa di 2 KB, e MSS di 1 KB, valori iniziali di sequenza = 0, senza gestione della congestione e RTT trascurabile.
+
+        Disegnare il diagramma spazio tempo elencando tutti segmenti scambiati e specificando per ogni segmento valori plausibili di Sequenza, Riscontro e Bit di codice attivi, compreso l'handshake iniziale e finale. Si applichi il piggybacking ove possibile.
+
+        \solution
+        segmento1 $\rightarrow$ SYN SEQ = 0\\
+        segmento2 $\leftarrow$ SYN SEQ=0 ACK = 1\\
+        segmento3 $\rightarrow$ SEQ = 1 + 1KB dati, ACK = 1\\
+        segmento4 $\rightarrow$ SEQ = 1001 + 1KB dati\\
+        segmento5 $\leftarrow$ ACK = 2001\\
+        segmento6 $\rightarrow$ SEQ = 2001 + 1KB dati\\
+        segmento5 $\rightarrow$ SEQ = 3001 + 1KB dati\\
+        segmento8 $\leftarrow$ ACK = 4001\\
+        segmento9 $\rightarrow$ SEQ = 4001 + 1KB dati\\
+        segmento10 $\rightarrow$ SEQ = 5001 + 1KB dati\\
+        segmento11 $\leftarrow$ ACK = 6001\\
+        segmento12 $\rightarrow$ SEQ = 6000, FIN\\
+        segmento13 $\leftarrow$ ACK = 6001\\
+        segmento14 $\leftarrow$ SEQ = 0, FIN\\
+        segmento15 $\rightarrow$ ACK = 1
+
+    \subsection{Congestione}
+        \problem
+        Si supponga che la finestra di congestione TCP cwnd sia impostata a 18 KB e che si verifichi un timeout.
+        
+        Quanto sarà grande la finestra se le quattro trasmissioni successive hanno successo?
+        Si assuma che la dimensione massima del segmento sia di 1 KB. (22, Tanenbaum, Fondamenti).
+
+        \solution
+        Nuova Soglia = 18KB/2 = 9KB
+        cwnd = 1KB (send1) 2KB (send2) 4KB (send3) 8KB (send4) 9KB
+
+    \subsection{Slow start 1}
+        \problem
+        Disegnare il diagramma spazio tempo di una connessione TCP in cui viene trasferito un file di 24KB con "Slow Start". Ipotizzare che la finestra del ricevente (rwnd) sia di 6KB, la dimensione del segmento MSS = 1KB e la soglia dell'algoritmo Slow-Start a 4KB. Specificare valori plausibili di Sequenza, Riscontro e Bit di codice attivi per i primi segmenti inviati, compreso l'hand\-shake iniziale. Si applichi il piggybacking ove possibile. (150129)
+
+        \solution
+        Sequenza awnd (min tra rwnd e cwnd): 1KB, 2KB, 4KB, 5KB, 6KB, 6KB
+
+        segmento1 $\rightarrow$ SYN SEQ = 100
+
+        segmento2 $\leftarrow$ SYN ACK = 101
+
+        segmento3 $\rightarrow$ ACK SEQ = 101 + 1KB dati
+
+        segmento4 $\leftarrow$ ACK = 1101
+
+        segmento5 $\rightarrow$ SEQ = 1101 + 1KB dati
+
+        segmento6 $\rightarrow$ SEQ = 2101 + 1 KB dati
+
+        segmento7 $\leftarrow$ ACK = 3101
+
+        segmento8 $\rightarrow$ ...
+
+    \subsection{Slow start 2}
+        \problem
+        Si consideri l'effetto slow start su una linea con RTT pari a 10 ms e nessuna congestione. La finestra di ricezione è di 24 KB e MSS è di 2 KB.
+
+        Volendo trasferire un file di grandi dimensioni, quanto tempo è necessario prima che sia possibile inviare una prima finestra completa? Trascurare il tempo di trasmissione. (160128)
+
+        \solution
+        La soglia non è specificata, quindi la cwnd raddoppia fino a raggiungere la finestra del rwnd, con la seguente sequenza 2 4 8 16 24.
+
+        Occorrono quindi 4 invii con i rispettivi ACK prima di arrivare ad una finestra di 24KB, ovvero 40ms.

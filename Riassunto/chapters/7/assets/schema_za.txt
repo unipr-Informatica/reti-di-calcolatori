@@ -1,0 +1,3 @@
+# Generazione del certificato self-signed per un server:
+$ openssl req -new -nodes -out hostcert.pem -keyout hostkey.pem /
+  -x509

@@ -1,0 +1,18 @@
+\begin{center}
+    \begin{tikzpicture}
+        %%%%%%%%%% Nodi %%%%%%%%%%
+        \node (HTTP) at (0,4) [draw,minimum width=2cm,minimum height=2em] {HTTP};
+        \node (IMAP) at (3,4) [draw,minimum width=2cm,minimum height=2em] {IMAP};
+        \node (FTP) at (6,4) [draw,minimum width=2cm,minimum height=2em] {FTP};
+        \node (LDAP) at (9,4) [draw,minimum width=2cm,minimum height=2em] {LDAP};
+        \node (TLS) at (4.5,2) [draw,minimum width=2cm,minimum height=2em] {SSL/TLS};
+        \node (TCP) at (4.5,0.5) [draw,minimum width=2cm,minimum height=2em] {TCP};
+
+        %%%%%%%%% Frecce %%%%%%%%%
+        \draw[<->] (HTTP.south) |- ++(4.5,-0.6) -- (TLS);
+        \draw[<-] (LDAP.south) |- ++(-4.5,-0.6);
+        \draw[<-] (IMAP.south) -- ++(0,-0.6);
+        \draw[<-] (FTP.south) -- ++(0,-0.6);
+        \draw[<->] (TLS) -- (TCP);
+    \end{tikzpicture}
+\end{center}

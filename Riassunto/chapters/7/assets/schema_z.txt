@@ -1,0 +1,6 @@
+# Generazione della coppia di chiavi
+$ openssl req -new -nodes -out hostreq.pem -keyout \
+  hostkey.pem -config openssl.cnf
+
+# Verifica il contenuto della richiesta
+$ openssl req -in req.pem -text

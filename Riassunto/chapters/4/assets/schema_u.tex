@@ -1,0 +1,25 @@
+\begin{center}
+    \begin{tikzpicture}
+        %%%%%%%%%% Nodi %%%%%%%%%%
+        \node[circle, draw, minimum size=1cm] (A) at  (0,4) {A};
+        \node[circle, draw, minimum size=1cm] (B) at  (0,2) {B};
+        \node[circle, draw, minimum size=1cm] (C) at  (0,0) {C};
+        \node[circle, draw, minimum size=1cm] (D) at  (2,1) {D};
+        \node[circle, draw, minimum size=1cm] (E) at  (4,4) {E};
+        \node[circle, draw, minimum size=1cm] (F) at  (7,4) {F};
+        \node[circle, draw, minimum size=1cm] (G) at  (5,0) {G};
+        \node[circle, draw, minimum size=1cm] (H) at  (8,0) {H};
+        
+        %%%%%%%%% Archi %%%%%%%%%%
+        \draw[<->,>=stealth] (A) -- node[left] {3} (B);
+        \draw[<->,>=stealth] (A) -- node[above] {1} (E);
+        \draw[<->,>=stealth] (B) -- node[left] {9} (C);
+        \draw[<->,>=stealth] (B) -- node[above] {3} (D);
+        \draw[<->,>=stealth] (C) -- node[above] {5} (G);
+        \draw[<->,>=stealth] (D) -- node[above] {4} (F);
+        \draw[<->,>=stealth] (D) -- node[above] {3} (G);
+        \draw[<->,>=stealth] (E) -- node[above] {2} (F);
+        \draw[<->,>=stealth] (E) -- node[right] {10} (G);
+        \draw[<->,>=stealth] (G) -- node[above] {10} (H);
+    \end{tikzpicture}
+\end{center}

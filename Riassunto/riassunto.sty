@@ -1,0 +1,48 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{stile-riassunto}[2019/02/21 Package contenente lo stile del riassunto di reti]
+
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
+\usepackage[utf8]{inputenc}     % Permette di inserire qualunque carattere UTF-8
+\usepackage{tikz}               % Utilizzata per disegnare schemi
+\usepackage{amsmath}            % Utilizzata per inserire formule matematiche
+\usepackage{hyperref}           % Serve a generare la tabella dei contenuti (TOC)
+\usepackage{enumitem}           % Serve a definire lo stile dell'itemize
+\usepackage[italian]{babel}     % Serve per la corretta hyphenation delle parole
+\usepackage{caption}            % Serve a rimuovere la caption di default delle tabelle
+\usepackage{enumitem}           % Serve a personalizzare le enumerate
+\usepackage{listings}           % Serve per i code snippets
+\usepackage{verbatim}           % Serve per gli \verb
+\usepackage{graphicx}           % Serve a specificare width e height a un'immagine storta del capitolo quattro
+
+\usetikzlibrary{calc,decorations.pathreplacing}
+
+%%%%%%%%%%%%%%% TOC Cliccabile %%%%%%%%%%%%%%%%
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%%%%%%%%%%%% Stile code snippets %%%%%%%%%%%%%%
+\lstset{
+    frame=tb,
+    language=C,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\small\ttfamily},
+    numbers=none,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{OliveGreen},
+    stringstyle=\color{orange},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=3
+}
+
+\title{Appunti di Reti di Calcolatori}
+\author{Alessio Artoni}

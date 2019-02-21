@@ -1,0 +1,1 @@
+bio = BIO_new_connect("host:port");

@@ -1,0 +1,5 @@
+openssl rsa -in rsa_key.pem -text 
+# Mostra il contenuto
+
+openssl rsa -in rsa_key.pem -pubout -out rsa_pub.pem
+# Estrae la chiave pubblica

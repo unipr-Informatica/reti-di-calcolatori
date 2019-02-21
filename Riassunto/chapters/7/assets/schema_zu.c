@@ -1,0 +1,1 @@
+SSL_set_mode(ssl, SSL_MODE_AUTO_RETRY);

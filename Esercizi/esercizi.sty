@@ -1,0 +1,33 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{stile-esercizi}[2019/02/10 Package contenente lo stile degli esercizi di reti]
+
+\usepackage[utf8]{inputenc}     % Permette di inserire qualunque carattere
+\usepackage{tikz}               % Utilizzata per disegnare schemi a blocchi
+\usepackage{amsmath}            % Utilizzata per inserire formule matematiche
+\usepackage{hyperref}           % Serve a generare la tabella dei contenuti (TOC)
+\usepackage{array}              % Serve per i tabular usati nelle legende di certi schemi
+\usepackage{enumitem}           % Serve a definire lo stile dell'itemize
+\usepackage{float}              % Necessario per impostare la posizione delle tabelle
+
+%%%%%%%%% Impostazione path immagini %%%%%%%%%%
+\graphicspath{ {./images/} }
+
+%%%%%%%%%%%%%%% TOC Cliccabile %%%%%%%%%%%%%%%%
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%%%% Comandi creati apposta per questo file %%%
+\newcommand{\problem}{\subsubsection*{Problema}}
+\newcommand{\solution}{\subsubsection*{Soluzione}}
+
+%%%%%%%%% Intestazione per gli schemi %%%%%%%%%
+\usetikzlibrary{arrows, shapes, intersections}
+
+\title{Esercizi di Reti di Calcolatori}
+\author{Alessio Artoni}
+\date{25 Settembre 2018}

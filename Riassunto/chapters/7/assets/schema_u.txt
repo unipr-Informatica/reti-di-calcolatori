@@ -1,0 +1,2 @@
+$ openssl dgst -sha1 -sign rsa_key.pem -out /
+  file.sha1_sign file.txt

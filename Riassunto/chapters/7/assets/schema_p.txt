@@ -1,0 +1,13 @@
+openssl passwd mysecret
+QvpTKPjqpBD9.
+# I primi due caratteri Qv sono il salt generato random e 
+# utilizzato assieme a mysecret per derivare la chiave di
+# cifratura
+
+openssl passwd -salt Qv mysecret
+# Riproduce la stessa cifratura
+
+openssl passwd -1 mysecret
+$1$NvOCDeMO$5keqaA/5i/O7kpEXArm0L/
+# $1$NvOCDeMO$ è il salt casuale, le restanti 22 cifre BASE64
+# sono l'hash MD5 di 128 bit)

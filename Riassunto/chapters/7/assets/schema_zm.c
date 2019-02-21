@@ -1,0 +1,1 @@
+if (BIO_write(bio, buf, len) <= 0) { /* handle failed write */ }

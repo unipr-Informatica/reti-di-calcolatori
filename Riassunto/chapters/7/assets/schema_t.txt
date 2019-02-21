@@ -1,0 +1,11 @@
+# Esempio encrypt/dectypt:
+$ openssl rsautl -encrypt -pubin -inkey rsa_pub.pem -in /
+  text.txt -out encrypted.txt
+$ openssl rsautl -decrypt -inkey rsa_key.pem -in /
+  encrypted.txt -out text.txt
+
+# Esempio sign/verify:
+$ openssl rsautl -sign -inkey rsa_key.pem -in text.txt /
+  -out signed.txt
+$ openssl rsautl -verify -pubin -inkey rsa_pub.pem -in /
+  signed.txt -out text.txt

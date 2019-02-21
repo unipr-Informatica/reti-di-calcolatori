@@ -1,0 +1,70 @@
+\begin{center}
+    \begin{tikzpicture}
+        %%%%%%%%%% Hubs %%%%%%%%%%
+        \node[draw,rectangle,minimum width=1.8cm] (Hub1) at (0,0) {Hub};
+        \node[draw,rectangle,minimum width=1.8cm] (Hub2) at (3,0) {Hub};
+        \node[draw,rectangle,minimum width=1.8cm] (Hub3) at (0,4) {Hub};
+
+        %%%%%%%%% Bridge %%%%%%%%%
+        \node[draw,rectangle,minimum width=1.8cm] (Bridge) at (3,2) {Bridge};
+
+        %%%%%%%% Clients %%%%%%%%%
+        \node[draw,rectangle,minimum width=0.5cm,minimum height=0.5cm] (A) at (-0.6,-1) {A};
+        \node[draw,rectangle,minimum width=0.5cm,minimum height=0.5cm] (B) at (0,-1) {B};
+        \node[draw,rectangle,minimum width=0.5cm,minimum height=0.5cm] (C) at (0.6,-1) {C};
+        \node[draw,rectangle,minimum width=0.5cm,minimum height=0.5cm] (D) at (2.4,-1) {D};
+        \node[draw,rectangle,minimum width=0.5cm,minimum height=0.5cm] (E) at (3,-1) {E};
+        \node[draw,rectangle,minimum width=0.5cm,minimum height=0.5cm] (F) at (3.6,-1) {F};
+        \node[draw,rectangle,minimum width=0.5cm,minimum height=0.5cm] (G) at (-0.6,3) {G};
+        \node[draw,rectangle,minimum width=0.5cm,minimum height=0.5cm] (H) at (0,3) {H};
+        \node[draw,rectangle,minimum width=0.5cm,minimum height=0.5cm] (I) at (0.6,3) {I};
+
+        %%%%%%%%% Links %%%%%%%%%%
+        \draw (Hub1.north) -- (Bridge.west);
+        \draw (Hub2.north) -- (Bridge.south);
+        \draw (Hub3.east) -- (Bridge.north);
+        \draw (A.north) -- ++(0,0.5);
+        \draw (B.north) -- ++(0,0.5);
+        \draw (C.north) -- ++(0,0.5);
+        \draw (D.north) -- ++(0,0.5);
+        \draw (E.north) -- ++(0,0.5);
+        \draw (F.north) -- ++(0,0.5);
+        \draw (G.north) -- ++(0,0.5);
+        \draw (H.north) -- ++(0,0.5);
+        \draw (I.north) -- ++(0,0.5);
+
+        %%%%%%%%% Porte %%%%%%%%%%
+        \node at (1.7,2.1) {1};
+        \node at (3.3,1.4) {2};
+        \node at (3,2.7) {3};
+
+        %%%%%%%% Tabella %%%%%%%%%
+        \draw (5.5,-0.5) -- ++(2,0);
+        \draw (5.5,3.3) -- ++(2,0);
+        \draw (5.5,4.1) -- ++(2,0);
+        \draw (5.5,-0.5) -- ++(0,4.6);
+        \draw (6.5,-0.5) -- ++(0,4.6);
+        \draw (7.5,-0.5) -- ++(0,4.6);
+        \node at (6,3) {A};
+        \node at (6,2.6) {B};
+        \node at (6,2.2) {C};
+        \node at (6,1.8) {D};
+        \node at (6,1.4) {E};
+        \node at (6,1) {F};
+        \node at (6,0.6) {G};
+        \node at (6,0.2) {H};
+        \node at (6,-0.2) {I};
+        \node at (7,3) {1};
+        \node at (7,2.6) {1};
+        \node at (7,2.2) {1};
+        \node at (7,1.8) {2};
+        \node at (7,1.4) {2};
+        \node at (7,1) {2};
+        \node at (7,0.6) {3};
+        \node at (7,0.2) {3};
+        \node at (7,-0.2) {3};
+
+        \node at (6,3.7) {Host};
+        \node at (7,3.7) {Inter.};
+    \end{tikzpicture}
+\end{center}

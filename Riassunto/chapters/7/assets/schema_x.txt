@@ -1,0 +1,2 @@
+$ openssl req -config openssl.cnf -newkey rsa:512 -days \
+  1000 –nodes -keyout cakey.pem  -out cacert.pem -x509 -new

@@ -1,0 +1,1 @@
+if (SSL_get_verify_result(ssl) != X509_V_OK) { /*handle failed verif.*/ }

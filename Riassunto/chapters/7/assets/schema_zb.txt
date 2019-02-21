@@ -1,0 +1,5 @@
+# Esempi
+$ openssl x509 -in cert.pem -noout -text
+$ openssl x509 -in cert.pem -noout -serial
+$ openssl x509 -in cert.pem -noout -subject
+$ openssl x509 -in cert.pem -out cert.der -outform DER
