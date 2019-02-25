@@ -325,12 +325,16 @@
             \end{itemize}
 
     \subsection{ADSL}
-        L’ADSL (Asymmetric DSL) è un utilizzo specifico di xDLS, pensato per l'home computing, in cui il download è prevalente. Con ADSL abbiamo:
+        L'ADSL (Asymmetric DSL) è un utilizzo specifico di xDLS, pensato per l'home computing, in cui il download è prevalente. Con ADSL abbiamo:
         \begin{itemize}
-            \item Canale 0 (0$\sim$4.3 KHz): per la fonia.
-            \item Canali 1-5 (4.3$\sim$25 KHz): non utilizzati per evitare interferenze tra fonia e dati.
-            \item Canale 6-30: 24 canali per l'upload. Massimo: 24 $\cdot$ 60 Kb/s = 1.4 Mb/s (effettivi 0.5 Mb/s)
-            \item Canale 31-255: 224 canali per il download. Massimo: 224 $\cdot$ 60 Kb/s = 13.4 Mb/s (effettivi 8 Mb/s)
+            \item Canale 0 (0 $\sim$ 4.3 KHz): per la fonia.
+            \item Canali 1-5 (4.3 KHz $\sim$ 25 KHz): non utilizzati per evitare interferenze tra fonia e dati.
+            \item Canale 6-30 (25 KHz $\sim$ 138 KHz): 24 canali per l'upload dei dati.
+            
+            Massimo: 24 $\cdot$ 60 Kb/s = 1.4 Mb/s (effettivi 0.5 Mb/s)
+            \item Canale 31-255 (138 KHz $\sim$ 1.1 MHz): 224 canali per il download dei dati.
+            
+            Massimo: 224 $\cdot$ 60 Kb/s = 13.4 Mb/s (effettivi 8 Mb/s)
         \end{itemize}
 
         \begin{center}
