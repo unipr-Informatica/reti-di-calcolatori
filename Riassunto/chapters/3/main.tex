@@ -485,7 +485,7 @@
 
             I primi 3 byte identificano il \textit{Vendor}: negli indirizzi unicast il primo byte è pari, negli indirizzi multicast il primo byte è dispari. L'indirizzo di broadcast è \texttt{ff-ff-ff-ff-ff-ff}.
 
-            Il campo \textbf{Data} contiene le PDU dei livelli superiori.
+            Il campo \textbf{Data} contiene le PDU dei livelli superiori, la dimensione del campo varia tra i 46 e i 1500 byte in esso sono contenuti i dati reali, i quali possono essere di lunghezza variabile in base alla MTU. Se i dati superano la capacità massima, vengono suddivisi in più pacchetti, mentre se i dati non raggiungono la lunghezza minima di 46 byte, viene aggiunta una sequenza di 0 detta \textbf{padding} della lunghezza necessaria per raggiungere la lunghezza minima.
 
             Il campo \textbf{FCS} contiene il valore di CRC-32.
 
